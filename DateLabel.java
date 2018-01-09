@@ -13,6 +13,9 @@ public class DateLabel {
 	static int year = 16; 	//enter year
 	static int dayOfWeek = 	3;
 	
+	static final String [] months = {"January", "February", "March", "April", "May", "June", "July",
+									 "August", "September", "October", "November", "December"};
+
 	static final String [] weekdayArray = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 										//0 		   1		  		2 		   3		   		4		 5			 6
 	static final Integer[] longMonths = {1, 3, 5, 7, 8, 10, 12};
@@ -46,6 +49,8 @@ public class DateLabel {
 			dayOfWeek += 700;
 		}
 		
+		System.out.println(months[month - 1] + " Prayer Requests");
+
 		/* print out the days */
 		while(day > 0) {
 			System.out.println(month + "/" + day-- + "/" + year + " " + weekdayArray[dayOfWeek-- % 7]);
